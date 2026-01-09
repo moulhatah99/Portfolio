@@ -17,26 +17,31 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">PORTFOLIO.</div>
+            <div class="logo">Moulhat AHMED</div>
             <ul class="nav-links">
                 <li><a href="#home">Accueil</a></li>
-                <li><a href="#projects">Mes Projets</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#services">Compétences métier</a></li>
+                <li><a href="#skills">Stack technique</a></li>
+                <li><a href="#projects">Réalisations</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- HERO -->
         <section id="home" class="hero">
             <div class="container hero-grid">
                 <div class="hero-content">
-                    <span class="badge">DISPONIBLE POUR PROJETS</span>
-                    <h1>BIENVENUE SUR MON PORTFOLIO JE SUIS <span class="highlight">DATA ANALYST</span></h1>
+                    <h1>BIENVENUE SUR MON PORTFOLIO</h1>
+                    <div class="hero-role-container">
+                        <span class="badge large-badge">Data Analyste</span>
+                    </div>
                     <p>Je transforme des données complexes en solutions exploitables et des défis analytiques en plans
-                        stratégiques pour l'avenir.</p>
+                        stratégiques pour les entreprises.</p>
                     <div class="hero-btns">
-                        <a href="#projects" class="btn btn-primary">Voir mes projets <i
+                        <a href="#projects" class="btn btn-primary">Voir mes thématiques <i
                                 data-lucide="arrow-up-right"></i></a>
                     </div>
                 </div>
@@ -49,90 +54,277 @@
             </div>
         </section>
 
-        <section id="projects" class="projects">
+        <!-- ABOUT ME -->
+        <section id="about" class="about">
             <div class="container">
-                <div class="section-header">
-                    <span class="badge">PROJETS</span>
-                    <h2>Quelques-uns de mes projets</h2>
+                <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                    <span class="badge large-badge-full">À PROPOS DE MOI</span>
                 </div>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="project1.png" alt="Dashboard de Ventes">
-                            <a href="#" class="project-arrow"><i data-lucide="arrow-up-right"></i></a>
-                        </div>
-                        <h3>Dashboard d'Analyse des Ventes</h3>
-                        <p>Visualisation interactive des performances de vente en temps réel avec Power BI.</p>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="project2.png" alt="Prédiction de Churn">
-                            <a href="#" class="project-arrow"><i data-lucide="arrow-up-right"></i></a>
-                        </div>
-                        <h3>Prédiction d'Attrition IA</h3>
-                        <p>Modèle de Machine Learning pour prédire et réduire le taux d'attrition client.</p>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="project3.png" alt="Analyse de Marché">
-                            <a href="#" class="project-arrow"><i data-lucide="arrow-up-right"></i></a>
-                        </div>
-                        <h3>Analyse des Tendances du Marché</h3>
-                        <p>Analyse approfondie des tendances du marché utilisant Python et SQL.</p>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="project4.png" alt="Optimisation de Stock">
-                            <a href="#" class="project-arrow"><i data-lucide="arrow-up-right"></i></a>
-                        </div>
-                        <h3>Optimisation des Stocks</h3>
-                        <p>Optimisation des stocks via analyse prédictive pour minimiser les pertes.</p>
+                <div class="about-content" style="max-width: 900px; margin: 0 auto; text-align: left;">
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-dark); margin-bottom: 2rem;">
+                        Data analyste spécialisée dans l’analyse décisionnelle, j’interviens sur l’ensemble du cycle de
+                        la donnée : préparation et nettoyage des données, modélisation analytique, calcul d’indicateurs,
+                        analyses statistiques et datavisualisation. J’ai une solide pratique de Power BI (DAX,
+                        modélisation) et Excel avancé, et je conçois des tableaux de bord orientés pilotage et
+                        performance.
+                    </p>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-dark); margin-bottom: 2rem;">
+                        Mon parcours m’a appris une chose : une donnée n’a de valeur que si elle raconte quelque chose
+                        d’utile. Je travaille sur des jeux de données complexes pour produire des indicateurs fiables,
+                        reproductibles et directement exploitables par les équipes métiers. J’ai travaillé sur des
+                        problématiques concrètes de performance, de formation et de compréhension des usages, dans des
+                        environnements où la donnée est à la fois abondante et complexe.
+                    </p>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-dark); margin-bottom: 2rem;">
+                        J’aime partir d’un besoin métier flou, structurer les données, poser les bonnes questions et
+                        faire émerger des analyses qui éclairent la décision. À travers mes projets, je cherche toujours
+                        à relier la technique (Power BI, SQL, Python, Excel) à l’impact business, en produisant des
+                        analyses claires, compréhensibles et orientées action.
+                    </p>
+                    <p
+                        style="font-size: 1.2rem; line-height: 1.8; color: var(--text-dark); margin-bottom: 3rem; font-weight: 600;">
+                        Mon objectif : aider les organisations à mieux décider grâce à des insights solides et
+                        accessibles.
+                    </p>
+
+                    <div class="cv-download-box"
+                        style="background-color: var(--header-violet); padding: 2.5rem; border-radius: 12px; text-align: center; color: white; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; box-shadow: 0 15px 35px rgba(124, 58, 237, 0.2);">
+                        <span style="font-size: 1.3rem; font-weight: 600;">Découvrez mon parcours complet en
+                            téléchargeant mon CV</span>
+                        <a href="CV Data analyst.pdf" target="_blank" class="btn"
+                            style="background-color: white; color: var(--accent); padding: 1rem 2.5rem; font-weight: 800; border-radius: 8px;">
+                            <i data-lucide="download"></i> TÉLÉCHARGER MON CV (PDF)
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- QUOTE BANNER -->
+        <section class="quote-banner">
+            <div class="container">
+                <div class="quote-container">
+                    <i data-lucide="quote" class="quote-icon"></i>
+                    <blockquote>
+                        "Là où certains voient des limites, les données ouvrent des possibilités"
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS & EXPERTISE (Anciennement Services) -->
         <section class="services" id="services">
             <div class="container">
-                <div class="section-header" style="text-align: center;">
-                    <span class="badge">SERVICES</span>
-                    <h2>Mes Services</h2>
+                <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                    <span class="badge large-badge-full">MES COMPÉTENCES MÉTIER</span>
                 </div>
                 <div class="services-list">
+                    <!-- Dashboard & DataViz -->
                     <div class="service-item">
                         <div class="service-content">
-                            <h3>Visualisation de Données</h3>
-                            <p>Création de dashboards percutants et intuitifs pour une prise de décision rapide.</p>
-                            <a href="#" class="btn btn-outline">Voir détails <i data-lucide="chevron-right"></i></a>
+                            <h3>Conception de Dashboards & DataViz</h3>
+                            <p>Création de solutions de visualisation interactives et percutantes pour transformer vos
+                                données en récits visuels clairs, facilitant une compréhension immédiate des enjeux.</p>
                         </div>
                         <div class="service-visual">
-                            <img src="service1.png" alt="Data Viz">
+                            <img src="dashboard_viz.png" alt="Dashboard Design">
                         </div>
                     </div>
+
+                    <!-- Automation & KPI -->
                     <div class="service-item">
                         <div class="service-content">
-                            <h3>Business Intelligence</h3>
-                            <p>Mise en place d'architectures de données pour centraliser et analyser vos métriques clés.
-                            </p>
-                            <a href="#" class="btn btn-outline">Voir détails <i data-lucide="chevron-right"></i></a>
+                            <h3>Automatisation de Reporting & Analyse de KPI</h3>
+                            <p>Mise en place de systèmes de rapports automatisés pour suivre vos indicateurs clés de
+                                performance en temps réel, garantissant fiabilité et gain de temps opérationnel.</p>
                         </div>
                         <div class="service-visual">
-                            <img src="service2.png" alt="BI">
+                            <img src="dashboard_viz.png" alt="Reporting Automation">
                         </div>
                     </div>
+
+                    <!-- Database Management -->
                     <div class="service-item">
                         <div class="service-content">
-                            <h3>Modélisation Prédictive</h3>
-                            <p>Application d'algorithmes statistiques pour anticiper les tendances futures.</p>
-                            <a href="#" class="btn btn-outline">Voir détails <i data-lucide="chevron-right"></i></a>
+                            <h3>Gestion de Base de Données Relationnelles</h3>
+                            <p>Manipulation experte de bases de données relationnelles SQL pour structurer, nettoyer et
+                                modéliser vos données de manière robuste et évolutive.</p>
                         </div>
                         <div class="service-visual">
-                            <img src="service3.png" alt="Predictive">
+                            <img src="db_management.png" alt="Database Management">
+                        </div>
+                    </div>
+
+                    <!-- ETL Pipelines -->
+                    <div class="service-item">
+                        <div class="service-content">
+                            <h3>Mise en place de Pipelines ETL</h3>
+                            <p>Conception et automatisation de flux d'extraction, transformation et chargement (ETL)
+                                pour centraliser des données provenant de sources hétérogènes.</p>
+                        </div>
+                        <div class="service-visual">
+                            <img src="etl_pipeline.png" alt="Pipelines ETL">
+                        </div>
+                    </div>
+
+                    <!-- Statistical Analysis -->
+                    <div class="service-item">
+                        <div class="service-content">
+                            <h3>Analyses Statistiques</h3>
+                            <p>Application de méthodes statistiques avancées pour identifier des tendances, valider des
+                                hypothèses et extraire des insights scientifiques actionnables.</p>
+                        </div>
+                        <div class="service-visual">
+                            <img src="stat_analysis.png" alt="Analyses Statistiques">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- SKILLS & TOOLS -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                    <span class="badge large-badge-full">STACK TECHNIQUE</span>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon sql">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                alt="SQL">
+                        </div>
+                        <span>SQL</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon excel">
+                            <img src="https://img.icons8.com/color/96/000000/microsoft-excel-2019.png" alt="Excel">
+                        </div>
+                        <span>Excel Avancé</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon pbi">
+                            <img src="https://img.icons8.com/color/96/000000/power-bi.png" alt="Power BI">
+                        </div>
+                        <span>Power BI</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon python">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                alt="Python">
+                        </div>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon talend">
+                            <img src="https://www.vectorlogo.zone/logos/talend/talend-icon.svg"
+                                alt="Talend Open Studio">
+                        </div>
+                        <span>Talend Open Studio</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS BY THEME -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                    <span class="badge large-badge-full">RÉALISATIONS</span>
+                    <p
+                        style="font-size: 1.25rem; color: var(--primary-text); max-width: 800px; margin: 2rem auto 0; line-height: 1.6; opacity: 0.9;">
+                        Découvrez une sélection de projets personnels choisis pour renforcer mes connaissances durant
+                        mon apprentissage. Ils ont été réalisés dans une démarche de montée en compétences, en
+                        appliquant la data analyse à des problématiques concrètes.
+                    </p>
+                </div>
+
+                <!-- Themes Grid (Shown by default) -->
+                <div id="themes-grid" class="themes-grid-container">
+                    <div class="theme-card theme-trigger" data-theme="sql">
+                        <div class="theme-img-container">
+                            <img src="sql_pro1.png" alt="SQL Theme">
+                            <div class="theme-overlay-hover">
+                                <span class="btn btn-primary btn-sm">Découvrir les projets SQL</span>
+                            </div>
+                        </div>
+                        <h3>SQL - Base de données</h3>
+                        <p>Optimisation et automation SQL.</p>
+                    </div>
+                    <div class="theme-card theme-trigger" data-theme="excel">
+                        <div class="theme-img-container">
+                            <img src="excel_pro1.png" alt="Excel Theme">
+                            <div class="theme-overlay-hover">
+                                <span class="btn btn-primary btn-sm">Découvrir les projets Excel</span>
+                            </div>
+                        </div>
+                        <h3>Excel Expert</h3>
+                        <p>Analyse RFM et pilotage.</p>
+                    </div>
+                    <div class="theme-card theme-trigger" data-theme="pbi">
+                        <div class="theme-img-container">
+                            <img src="pbi_pro1.png" alt="Power BI Theme">
+                            <div class="theme-overlay-hover">
+                                <span class="btn btn-primary btn-sm">Découvrir les tableaux Power BI</span>
+                            </div>
+                        </div>
+                        <h3>Power BI</h3>
+                        <p>Data Viz & BI Strategic.</p>
+                    </div>
+                    <div class="theme-card theme-trigger" data-theme="python">
+                        <div class="theme-img-container">
+                            <img src="py_pro1.png" alt="Python Theme">
+                            <div class="theme-overlay-hover">
+                                <span class="btn btn-primary btn-sm">Découvrir les scripts Python</span>
+                            </div>
+                        </div>
+                        <h3>Python Data Science</h3>
+                        <p>EDA et traitement de données.</p>
+                    </div>
+                    <div class="theme-card theme-trigger" data-theme="ml">
+                        <div class="theme-img-container">
+                            <img src="ml_pro1.png" alt="ML Theme">
+                            <div class="theme-overlay-hover">
+                                <span class="btn btn-primary btn-sm">Découvrir les modèles ML</span>
+                            </div>
+                        </div>
+                        <h3>Machine Learning</h3>
+                        <p>Clustering et segmentation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Theme Detail Overlay (Full-page Projects View) -->
+        <div id="themeDetailOverlay" class="theme-overlay">
+            <div class="theme-overlay-content">
+                <nav class="theme-overlay-nav">
+                    <div class="container nav-flex">
+                        <h2 id="overlayThemeTitle">Thématique</h2>
+                        <button id="closeThemeOverlay" class="btn-text">
+                            <i data-lucide="arrow-left"></i> Retour aux thématiques
+                        </button>
+                    </div>
+                </nav>
+                <div class="theme-projects-body">
+                    <div class="container">
+                        <div id="projects-sub-grid" class="project-grid single-col">
+                            <!-- Content injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Detail Modal -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body" id="modalBody">
+                    <!-- Content will be injected by JS -->
+                </div>
+            </div>
+        </div>
 
         <section class="stats-banner">
             <div class="container stats-grid">
@@ -143,10 +335,9 @@
                     </div>
                 </div>
                 <div class="stats-content">
-                    <span class="badge dark">DISPONIBLE POUR PROJETS</span>
-                    <h2>Data Analyst Senior & Business Insights.</h2>
-                    <p>Expert en extraction de valeur à partir de données complexes, avec une approche orientée business
-                        et résultats tangibles.</p>
+                    <span class="badge dark">DÉCISIONNEL & ANALYSE</span>
+                    <h2>Expert en Data Insight & Business Intelligence.</h2>
+                    <p>Accompagnement stratégique à travers la valorisation de vos données.</p>
                     <div class="stats-numbers">
                         <div class="stat">
                             <span class="num">50+</span>
@@ -158,44 +349,8 @@
                         </div>
                         <div class="stat">
                             <span class="num">10K+</span>
-                            <span class="label">Points de données analysés</span>
+                            <span class="label">Points de données</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="skills">
-            <div class="container">
-                <div class="section-header" style="text-align: center;">
-                    <h2>Compétences & Outils</h2>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon python">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                                alt="Python">
-                        </div>
-                        <span>Python</span>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon sql">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                                alt="SQL">
-                        </div>
-                        <span>SQL / DB</span>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon tableau">
-                            <img src="https://img.icons8.com/color/48/000000/tableau-software.png" alt="Tableau">
-                        </div>
-                        <span>Tableau</span>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon excel">
-                            <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019.png" alt="Excel">
-                        </div>
-                        <span>Excel Avancé</span>
                     </div>
                 </div>
             </div>
@@ -220,26 +375,36 @@
 
         <section id="contact" class="footer-cta">
             <div class="container">
-                <div class="footer-grid">
-                    <div class="cta-text">
-                        <h2>Travaillons Ensemble</h2>
-                        <p>Vous avez un projet de données ? Discutons de la manière dont je peux vous aider à en tirer
-                            le meilleur parti.</p>
-                        <div class="socials">
-                            <a href="#"><i data-lucide="linkedin"></i></a>
-                            <a href="#"><i data-lucide="github"></i></a>
-                            <a href="#"><i data-lucide="twitter"></i></a>
-                        </div>
-                    </div>
-                    <div class="contact-cards">
-                        <div class="contact-card">
-                            <span>Vous cherchez un Analyste créatif ?</span>
-                            <a href="mailto:hello@data.com">hello@data.com <i data-lucide="arrow-up-right"></i></a>
-                        </div>
-                        <div class="contact-card">
-                            <span>Vous voulez discuter ?</span>
-                            <a href="#">Prendre rendez-vous <i data-lucide="arrow-up-right"></i></a>
-                        </div>
+                <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                    <span class="badge large-badge-full">CONTACT</span>
+                </div>
+                <div class="contact-center-layout" style="text-align: center;">
+                    <h2 style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1.5rem; color: var(--text-dark);">
+                        Travaillons Ensemble</h2>
+                    <p
+                        style="font-size: 1.2rem; margin-bottom: 4rem; opacity: 0.8; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        Prenez contact pour transformer votre vision en réalité basée sur la donnée.
+                    </p>
+
+                    <div class="contact-links-row"
+                        style="display: flex; justify-content: center; align-items: center; gap: 4rem; flex-wrap: wrap;">
+                        <a href="https://github.com/moulhatah99/Portfolio_data" target="_blank"
+                            class="contact-link-item"
+                            style="display: flex; align-items: center; gap: 1rem; text-decoration: none; color: var(--primary-text); font-weight: 700; font-size: 1.3rem; transition: var(--transition);">
+                            <div
+                                style="width: 50px; height: 50px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.1);">
+                                <i data-lucide="github"></i>
+                            </div>
+                            GitHub
+                        </a>
+                        <a href="mailto:moulhatah99@gmail.com" class="contact-link-item"
+                            style="display: flex; align-items: center; gap: 1rem; text-decoration: none; color: var(--primary-text); font-weight: 700; font-size: 1.3rem; transition: var(--transition);">
+                            <div
+                                style="width: 50px; height: 50px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.1);">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            moulhatah99@gmail.com
+                        </a>
                     </div>
                 </div>
             </div>
@@ -251,17 +416,14 @@
             <div class="footer-bottom">
                 <div class="links">
                     <a href="#home">Accueil</a>
-                    <a href="#projects">Mes Projets</a>
                     <a href="#services">Services</a>
+                    <a href="#projects">Réalisations</a>
                 </div>
                 <p>&copy; 2024 Portfolio Data Analyst. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
     <script src="script.js"></script>
 </body>
 
