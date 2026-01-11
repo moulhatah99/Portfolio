@@ -16,12 +16,12 @@ const projectsByCategory = {
             method: `
                 <p>Pour répondre à ces besoins, j’ai commencé par analyser le modèle relationnel de la base de données Chinook, en identifiant les tables clés liées aux ventes, aux produits, aux clients et aux dates de facturation. Cette étape m’a permis de comprendre les relations entre les entités et de définir les dimensions métiers nécessaires à l’analyse : le temps, les produits et les clients.</p>
                 
-                <div class="tech-stack-mini" style="margin: 1.5rem 0; padding: 1rem; background: rgba(0,0,0,0.03); border-radius: 12px; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                <div class="tech-stack-mini" style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; border: 1px solid rgba(255,255,255,0.1);">
                     <strong>Technologies utilisées :</strong>
-                    <span style="display: flex; align-items: center; gap: 0.4rem; background: white; padding: 0.4rem 0.8rem; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); font-size: 0.9rem;">
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">
                         <img src="sql_logo_custom.png" alt="SQL Logo" style="height: 20px; width: auto;"/> SQL
                     </span>
-                    <span style="display: flex; align-items: center; gap: 0.4rem; background: white; padding: 0.4rem 0.8rem; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); font-size: 0.9rem;">
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">
                         <img src="db_browser_sqlite_icon.png" alt="SQLite Logo" style="height: 20px; width: auto;"/> DB Browser for SQLite
                     </span>
                 </div>
@@ -50,23 +50,39 @@ const projectsByCategory = {
     excel: [
         {
             id: "excel1",
-            title: "Suivi Ventes Commerciales",
-            category: "Excel Expert",
+            title: "Pilotage de la Performance Commerciale & Segmentation Clients",
+            category: "Excel Expert / Dashboarding",
             image: "excel_pro1.png",
-            description: "Outil de pilotage complet pour une équipe commerciale de 15 personnes afin de suivre leurs objectifs via Power Query.",
-            method: "Modélisation via Power Pivot et automatisation des flux de données CRM avec Power Query.",
-            results: "Réduction drastique du temps de reporting et hausse de 12% de la réactivité des managers.",
-            github: "https://github.com/votre-compte/excel-sales-tracking"
-        },
-        {
-            id: "excel2",
-            title: "Analyse RFM & Fidélisation",
-            category: "Excel Expert",
-            image: "excel_pro2.png",
-            description: "Segmentation statistique de la base client pour optimiser les budgets marketing.",
-            method: "Utilisation de formules matricielles et de tableaux croisés dynamiques pour le scoring RFM.",
-            results: "Baisse du taux de churn de 8% après la mise en place de campagnes ciblées sur les clients 'À risque'.",
-            github: "https://github.com/votre-compte/excel-rfm"
+            gallery_title: "Résultat Dashboard",
+            description: "Ce projet illustre la transformation de données de vente brutes ('Global Superstore') en un système de pilotage décisionnel interactif. L'objectif est d'offrir une vision claire de la rentabilité et de la fidélité client pour orienter la stratégie commerciale.",
+            context_title: "Problématique Métier & Enjeux Stratégiques",
+            context: "L'entreprise faisait face à une difficulté de lecture de ses marges réelles et à une méconnaissance de la valeur de sa base client. La problématique était de transformer plus de 9 000 transactions en indicateurs de performance (KPI) fiables pour répondre à des questions business critiques : Quelle est la marge brute réelle par mois ? Quels segments clients (Champions vs À risque) prioriser ? Quelles sont les zones géographiques déficitaires ?",
+            method_title: "Méthodologie & Réalisations Techniques",
+            method: `
+                <p>J'ai exploité la puissance de la suite Power de Microsoft Excel pour construire une solution automatisée et robuste :</p>
+                
+                <div class="tech-stack-mini" style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; border: 1px solid rgba(255,255,255,0.1);">
+                    <strong>Pipeline technique :</strong>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Power Query (Nettoyage & ETL)</span>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">TCD & Graphiques Croisés</span>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Analyse Géographique & Churn</span>
+                </div>
+
+                <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; text-align: left;">
+                    <li><strong>Nettoyage & Préparation (Power Query)</strong> : Connexion aux données brutes, normalisation des types de données, gestion des doublons et formatage rigoureux des dates de commande.</li>
+                    <li><strong>Analyses Géographiques Précises</strong> : Mise en place d'une cartographie dynamique permettant de zoomer sur la performance par État (ex: Californie, Texas) au-delà des simples régions.</li>
+                    <li><strong>Segmentation & Distribution Clients</strong> : Modélisation d'une répartition globale de la base client (Profils rentables, à potentiel, à risque) via des graphiques de répartition pour une vision macro.</li>
+                    <li><strong>Détection du Churn</strong> : Identification proactive des TOP 5 clients à risque de départ (Churn) pour permettre des actions de fidélisation ciblées.</li>
+                    <li><strong>Interface Décisionnelle Multi-Axes</strong> : Conception d'un dashboard interactif permettant de filtrer instantanément par Catégorie, Année, Région et Segment Client.</li>
+                </ul>
+            `,
+            skills_extra_title: "✅ Questions Business Répondues",
+            skills_extra: "Le dashboard permet désormais de répondre précisément : Quel est le taux de marge moyen des Champions ? Quels sont les produits les plus rentables par rapport aux volumes vendus ? Qui sont les clients prioritaires à contacter pour éviter leur départ (Churn) ?",
+            github: "https://github.com/moulhatah99/Portfolio_data/blob/main/Excel/SampleSuperstore/superstore.xlsx",
+            conclusion: "Le fichier Excel complet incluant les requêtes Power Query et le Dashboard final est disponible sur mon GitHub.",
+            screenshots: [
+                { src: "excel_superstore_dashboard_final.png", label: "Dashboard Final - Analyse Sales, Geography & Churn" }
+            ]
         }
     ],
     pbi: [
@@ -209,7 +225,7 @@ function openModal(data) {
         if (data.screenshots) {
             screenshotsHtml = `
                 <div class="modal-gallery">
-                    <h4><i data-lucide="image" size="18"></i> Extraits & Requêtes</h4>
+                    <h4><i data-lucide="image" size="18"></i> ${data.gallery_title || 'Extraits & Requêtes'}</h4>
                     <div class="gallery-grid">
                         ${data.screenshots.map(s => `
                             <div class="gallery-item">
@@ -303,7 +319,7 @@ const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         header.style.padding = '1rem 0';
-        header.style.backgroundColor = 'rgba(15, 23, 42, 0.98)'; /* Fond bleu nuit très sombre */
+        header.style.backgroundColor = 'rgba(26, 11, 46, 0.98)'; /* Violet sombre --header-violet */
     } else {
         header.style.padding = '1.5rem 0';
         header.style.backgroundColor = 'var(--header-violet)';
