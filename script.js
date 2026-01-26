@@ -87,58 +87,192 @@ const projectsByCategory = {
     ],
     pbi: [
         {
-            id: "pbi1",
-            title: "Dashboard Stratégique Global",
-            category: "Power BI",
-            image: "pbi_pro1.png",
-            description: "Rapport 360° pour la direction générale avec indicateurs financiers et opérationnels.",
-            method: "Connexion à des sources hybrides (SQL + Cloud) et développement de mesures DAX temporelles.",
-            results: "Une seule source de vérité pour tous les départements, éliminant les silos de données.",
-            github: "https://github.com/votre-compte/pbi-global"
+            id: "pbi_rh",
+            title: "RH Strategic Hub : Pilotage 360° du Capital Humain",
+            category: "Power BI / HR Analytics",
+            image: "pbi_rh_hub_new.png",
+            gallery_title: "Tableaux de bord stratégiques (Multi-Pages)",
+            description: "Système décisionnel complet structuré en 3 piliers stratégiques (Performance, Inclusion, Rétention), offrant une vision granulaire de la gestion RH via une interface interactive 'Dark Mode' haut de gamme.",
+            context_title: "1. Vision & Objectifs Métier",
+            context: `
+                <p>Ce projet vise à centraliser toute la donnée RH (207 collaborateurs) pour permettre aux décideurs d'identifier les drivers de performance, de garantir l'équité salariale et d'optimiser les stratégies de rétention des talents.</p>
+                <p style="margin: 1rem 0; font-style: italic; color: #c4b5fd;">"Transformer des données administratives en leviers de croissance humaine et financière."</p>
+            `,
+            method_title: "2. Expertise BI & Technique",
+            method: `
+                <p>Le projet repose sur une modélisation Star Schema optimisée et des calculs DAX avancés pour des KPIs en temps réel.</p>
+                <div class="tech-stack-mini" style="margin: 1.5rem 0; padding: 1.2rem; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; flex-direction: column; gap: 0.8rem; border: 1px solid rgba(139, 92, 246, 0.2);">
+                    <strong>Indicateurs Clés Modélisés :</strong>
+                    <code style="font-size: 0.8rem; color: #c4b5fd;">Turnover Rate : 33.23% (Analyse des tendances de départ).</code>
+                    <code style="font-size: 0.8rem; color: #c4b5fd;">Masse Salariale : $14.63M (Visualisation par performance).</code>
+                    <code style="font-size: 0.8rem; color: #c4b5fd;">Satisfaction & Engagement : 4.11/5 (Score moyen collaborateur).</code>
+                </div>
+            `,
+            skills_extra_title: "3. Analyse des Piliers Stratégiques",
+            skills_extra: `
+                <div style="display: flex; flex-direction: column; gap: 1.2rem; text-align: left;">
+                    <p><strong>Executive Performance</strong> : Monitoring des coûts, productivité par département (Production leader avec 126 agents) et évolution historique des recrutements.</p>
+                    <p><strong>Equity Audit (Inclusion)</strong> : Audit de l'équité par genre et âge (56% Femmes / 44% Hommes), assurant une politique de rémunération juste et transparente.</p>
+                    <p><strong>Retention & Recruitments</strong> : Diagnostic des motifs de départ (Another position, Salary) et optimisation des canaux de sourcing (Indeed & LinkedIn en tête).</p>
+                </div>
+            `,
+            github: "https://github.com/moulhatah99/Portfolio_data",
+            conclusion: "Un outil de pilotage robuste permettant de transformer la gestion humaine en un avantage compétitif mesurable.",
+            screenshots: [
+                { src: "pbi_rh_hub_new.png", label: "Portail d'accueil : Indice de santé RH & Navigation" },
+                { src: "pbi_rh_executive_new.png", label: "Performance View : Coûts, Engagement & Effectifs" },
+                { src: "pbi_rh_inclusion_new.png", label: "Equity Audit : Diversité & Équilibre Salarial" },
+                { src: "pbi_rh_retention_new.png", label: "Retention Insights : Churn & Sources de Recrutement" }
+            ]
         },
         {
-            id: "pbi2",
-            title: "Analyse des Stocks & Supply Chain",
-            category: "Power BI",
-            image: "pbi_pro2.png",
-            description: "Optimisation de la rotation des stocks et réduction des ruptures.",
-            method: "Intégration des données logistiques et calcul des niveaux de stock de sécurité dynamiques.",
-            results: "Réduction des surstocks de 20% en 6 mois.",
-            github: "https://github.com/votre-compte/pbi-inventory"
+            id: "pbi_supply",
+            title: "Supply chain : gestion de stocks & suivi de livraisons",
+            category: "Power BI / Supply Chain",
+            image: "pbi_supply_chain.png",
+            gallery_title: "Architecture Logistique",
+            description: "Développement d'un système de monitoring en temps réel de la chaîne d'approvisionnement pour optimiser les niveaux de stocks et la ponctualité des livraisons.",
+            context_title: "Défis de la Supply Chain",
+            context: "La réduction des coûts de stockage tout en évitant les ruptures est le défi majeur traité ici. L'objectif est de fournir une visibilité totale sur les délais transporteurs et la rotation des inventaires.",
+            method_title: "Ingénierie des Données Supply",
+            method: `
+                <p>Mise en place d'un pipeline de monitoring logistique :</p>
+                <div class="tech-stack-mini" style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; border: 1px solid rgba(255,255,255,0.1);">
+                    <strong>Outils :</strong>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Calcul de Stock Sécu</span>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Analyse OTIF</span>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Forecasting</span>
+                </div>
+                <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; text-align: left;">
+                    <li><strong>Optimisation de Stock</strong> : Calcul automatique des seuils de réapprovisionnement et alertes sur les surstocks.</li>
+                    <li><strong>Performance Transporteur</strong> : Suivi du taux 'On-Time In-Full' (OTIF) pour évaluer la fiabilité des partenaires logistiques.</li>
+                    <li><strong>Visibilité End-to-End</strong> : Tracking des flux depuis l'entrepôt jusqu'au client final.</li>
+                </ul>
+            `,
+            skills_extra_title: "📈 Gains Opérationnels",
+            skills_extra: "Réduction des délais de livraison et optimisation des flux de trésorerie bloqués dans les stocks dormants.",
+            github: "https://github.com/moulhatah99/Portfolio_data",
+            conclusion: "Ce projet est en cours de finalisation et sera bientôt disponible en version complète."
+        },
+        {
+            id: "pbi_sales",
+            title: "Suivi des performances de ventes",
+            category: "Power BI / Business Intel",
+            image: "pbi_pro1.png",
+            gallery_title: "Sales Insights",
+            description: "Dashboard 360° offrant une analyse granulaire du chiffre d'affaires, des marges et de la croissance géographique.",
+            context_title: "Pilotage Commercial",
+            context: "Besoin d'une vue unifiée des ventes globales pour identifier les régions leaders et les produits moteurs de croissance.",
+            method_title: "Analyse Multidimensionnelle",
+            method: `
+                <p>Construction d'une interface de pilotage haute performance :</p>
+                <div class="tech-stack-mini" style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; border: 1px solid rgba(255,255,255,0.1);">
+                    <strong>Fonctionnalités :</strong>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Comparaison YoY</span>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Cartographie Interactive</span>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Drill-through</span>
+                </div>
+                <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; text-align: left;">
+                    <li><strong>Analyse Temporelle</strong> : Comparaison Year-over-Year (YoY) pour mesurer la croissance réelle.</li>
+                    <li><strong>Visualisation Géographique</strong> : Map interactive pour explorer les performances par pays et par ville.</li>
+                    <li><strong>Top/Bottom Products</strong> : Focus sur les meilleures ventes et les stocks à faible rotation.</li>
+                </ul>
+            `,
+            skills_extra_title: "✅ Vision Stratégique",
+            skills_extra: "Détection rapide des opportunités de marché et optimisation des budgets publicitaires vers les zones les plus rentables.",
+            github: "https://github.com/moulhatah99/Portfolio_data",
+            conclusion: "L'outil est utilisé pour les revues mensuelles de performance commerciale."
         }
     ],
     python: [
         {
             id: "py1",
-            title: "Analyse Exploratoire (EDA) RH",
-            category: "Python Data Science",
+            title: "Analyse Exploratoire (EDA) & Statistiques RH",
+            category: "Python / Data Science",
             image: "py_pro1.png",
-            description: "Étude statistique des facteurs influençant le climat social et la rétention.",
-            method: "Nettoyage de données brutes avec Pandas et visualisation Seaborn/Matplotlib.",
-            results: "Identification de signaux faibles précédant les démissions chez les cadres.",
-            github: "https://github.com/votre-compte/py-hr-eda"
+            gallery_title: "Visualisations & Stats",
+            description: "Étude approfondie des facteurs d'influence sur le climat social et la satisfaction des collaborateurs via des méthodes statistiques.",
+            context_title: "Contexte Social",
+            context: "Identification de signaux faibles précédant les démissions et compréhension des corrélations entre ancienneté, formation et promotion.",
+            method_title: "Pipeline de Data Science",
+            method: `
+                <p>Mise en œuvre d'un cadre d'analyse mathématique rigoureux :</p>
+                <div class="tech-stack-mini" style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; border: 1px solid rgba(255,255,255,0.1);">
+                    <strong>Stack Python :</strong>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Pandas / Numpy</span>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Seaborn / Plotly</span>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Scipy (Stats)</span>
+                </div>
+                <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; text-align: left;">
+                    <li><strong>Data Cleaning</strong> : Traitement des valeurs manquantes et normalisation des variables catégorielles.</li>
+                    <li><strong>Exploration Graphique</strong> : Conception de graphiques complexes (Heatmaps, Violin plots) pour détecter les outliers.</li>
+                    <li><strong>Tests Statistiques</strong> : Validation des hypothèses via des tests de corrélation (P-value) pour assurer la robustesse des insights.</li>
+                </ul>
+            `,
+            skills_extra_title: "💡 Insights Clés",
+            skills_extra: "Détection de corrélations inattendues entre le temps de trajet et le taux de churn, permettant une révision des politiques de télétravail.",
+            github: "https://github.com/moulhatah99/Portfolio_data",
+            conclusion: "Le notebook Jupyter complet est disponible sur GitHub."
         },
         {
             id: "py2",
-            title: "Web Scraping & Analyse Immo",
-            category: "Python Data Science",
+            title: "Web Scraping & Analyse du Marché Immobilier",
+            category: "Python / Automatisation",
             image: "py_pro2.png",
-            description: "Automatisation de la veille tarifaire sur les portails immobiliers.",
-            method: "Scraping avec BeautifulSoup et agrégation des prix au m² par quartier.",
-            results: "Détection quotidienne d'opportunités d'achat sous le prix du marché.",
-            github: "https://github.com/votre-compte/py-immo-scrape"
+            gallery_title: "Extraction de Données",
+            description: "Outil automatisé de veille tarifaire collectant des données immobilières pour identifier des opportunités d'investissement.",
+            context_title: "Veille Concurrentielle",
+            context: "Nécessité de benchmarker les prix au m² en temps réel pour détecter les biens sous-évalués.",
+            method_title: "Ingénierie de Scraping",
+            method: `
+                <p>Développement d'un agent d'extraction robuste :</p>
+                <div class="tech-stack-mini" style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; border: 1px solid rgba(255,255,255,0.1);">
+                    <strong>Technos :</strong>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">BeautifulSoup / Selenium</span>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Requests</span>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Matplotlib</span>
+                </div>
+                <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; text-align: left;">
+                    <li><strong>Extraction Multi-sources</strong> : Récupération automatisée des annonces sur plusieurs portails majeurs.</li>
+                    <li><strong>Parsing & Structuration</strong> : Transformation du HTML brut en bases de données SQL exploitables.</li>
+                    <li><strong>Analyse de Tendances</strong> : Dashboarding rapide des prix médians par quartier et diagnostic d'anomalies.</li>
+                </ul>
+            `,
+            skills_extra_title: "🚀 Performance",
+            skills_extra: "Extraction quotidienne de plus de 1000 annonces en moins de 10 minutes grâce à l'optimisation des requêtes.",
+            github: "https://github.com/moulhatah99/Portfolio_data",
+            conclusion: "Le script est prêt pour une intégration en production."
         }
     ],
     ml: [
         {
             id: "ml1",
-            title: "Clustering K-Means Clients",
-            category: "Machine Learning",
+            title: "Clustering K-Means & Segmentation Clients",
+            category: "Machine Learning / Marketing",
             image: "ml_pro1.png",
-            description: "Segmentation non supervisée pour la personnalisation de masse.",
-            method: "Preprocessing des données et optimisation de l'algorithme K-Means via la méthode Elbow.",
-            results: "Définition de 5 personnas types pour des campagnes marketing ultra-personnalisées.",
-            github: "https://github.com/votre-compte/ml-clustering"
+            gallery_title: "Segmentation Algorithmique",
+            description: "Mise en place d'un modèle non supervisé pour regrouper les clients selon leurs comportements d'achat réels.",
+            context_title: "Hyper-personnalisation",
+            context: "Passer d'un marketing de masse à une approche ciblée en comprenant les nuances de la base client.",
+            method_title: "Cycle de Modélisation ML",
+            method: `
+                <p>Application rigoureuse du workflow Machine Learning :</p>
+                <div class="tech-stack-mini" style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; border: 1px solid rgba(255,255,255,0.1);">
+                    <strong>Stack ML :</strong>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Scikit-learn</span>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">K-Means ++</span>
+                    <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-text); padding: 0.4rem 0.8rem; font-size: 0.9rem;">Elbow Method</span>
+                </div>
+                <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; text-align: left;">
+                    <li><strong>Feature Engineering</strong> : Création de variables de comportement (Récence, Fréquence, Panier moyen).</li>
+                    <li><strong>Optimisation de Modèle</strong> : Utilisation de la méthode du coude (Elbow) et du score de Silhouette pour déterminer le nombre optimal de clusters.</li>
+                    <li><strong>Analyse de Profils</strong> : Caractérisation métier de chaque groupe pour définir des actions marketing spécifiques.</li>
+                </ul>
+            `,
+            skills_extra_title: "⭐ Résultats",
+            skills_extra: "Définition de 5 personas types, permettant une augmentation de 15% du taux de conversion des campagnes emailing.",
+            github: "https://github.com/moulhatah99/Portfolio_data",
+            conclusion: "Le modèle est prêt à être déployé pour des prédictions en temps réel."
         }
     ]
 };

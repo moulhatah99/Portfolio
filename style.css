@@ -47,11 +47,27 @@ h3 {
 }
 
 h1 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: clamp(2rem, 5.5vw, 4.5rem);
     text-transform: uppercase;
-    margin-bottom: 1rem;
-    white-space: normal;
-    /* Permet le retour à la ligne si nécessaire */
+    margin-bottom: 2.5rem;
+    white-space: nowrap;
+    animation: revealBlur 5s ease-in-out infinite;
+}
+
+@keyframes revealBlur {
+
+    0%,
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+        letter-spacing: -2px;
+    }
+
+    50% {
+        filter: blur(10px);
+        opacity: 0.3;
+        letter-spacing: 10px;
+    }
 }
 
 h2 {
@@ -87,25 +103,41 @@ h2 {
 }
 
 .large-badge-full {
-    display: block;
-    width: 100%;
-    font-size: 1.2rem !important;
-    /* Police réduite */
-    padding: 0.75rem 0 !important;
-    /* Padding divisé par deux (1.5 -> 0.75) */
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.8), rgba(139, 92, 246, 0.6)) !important;
-    backdrop-filter: blur(10px);
-    color: white !important;
-    /* Texte blanc pour contraste */
-    border-radius: 6px !important;
-    /* Moins arrondi */
-    /* Arrondi légèrement réduit aussi */
+    display: inline-block !important;
+    width: auto !important;
+    font-size: clamp(2.5rem, 10vw, 6rem) !important;
+    font-weight: 950 !important;
+    text-transform: uppercase;
+    color: var(--primary-text) !important;
+    background: none !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 5rem auto 2rem !important;
+    transform: rotate(-3deg) skew(-2deg);
+    line-height: 0.9;
+    letter-spacing: -3px !important;
+    position: relative;
+    z-index: 10;
     text-align: center;
-    font-weight: 800;
-    letter-spacing: 4px;
-    /* Un peu moins espacé pour rester cohérent */
-    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.1);
-    margin-bottom: 0 !important;
+    /* Effet miroir flouté sous le texte */
+    -webkit-box-reflect: below -2.5vw linear-gradient(transparent, rgba(139, 92, 246, 0.15));
+    /* Halo lumineux flouté autour du contour */
+    text-shadow: 0 0 30px rgba(139, 92, 246, 0.4),
+        0 0 60px rgba(139, 92, 246, 0.2);
+    transition: var(--transition);
+}
+
+.large-badge-full:hover {
+    transform: rotate(-1deg) scale(1.05);
+    filter: brightness(1.2);
+}
+
+@media (max-width: 768px) {
+    .large-badge-full {
+        letter-spacing: -2px !important;
+        margin: 4rem auto 1.5rem !important;
+    }
 }
 
 /* Buttons */
@@ -238,18 +270,24 @@ header nav {
 }
 
 .large-badge {
-    font-size: 1.1rem;
-    padding: 0.6rem 2rem;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.9), rgba(139, 92, 246, 0.7));
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.1);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    /* Taille réduite */
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--accent);
+    /* Changé en violet */
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    padding: 0;
+    line-height: 1;
+    letter-spacing: 1px;
     display: inline-block;
-    /* S'adapte à la taille du texte */
-    font-weight: 700;
-    letter-spacing: 2px;
+    /* Effet miroir très discret */
+    -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(139, 92, 246, 0.05));
+    /* Lueur atténuée */
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+    font-family: 'Outfit', sans-serif;
 }
 
 .hero-content p {
@@ -1360,4 +1398,94 @@ footer {
 
 .project-card:nth-child(4) {
     transition-delay: 0.4s;
+}
+
+/* CV Download Section - New Animated Style */
+.cv-download-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+    text-align: center;
+    background: transparent !important;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    box-shadow: none !important;
+    position: relative;
+    transition: var(--transition);
+    animation: subtleFloat 6s ease-in-out infinite;
+}
+
+.cv-download-box::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    z-index: -1;
+    animation: glowPulse 6s ease-in-out infinite;
+}
+
+.cv-download-box span {
+    font-size: 1.4rem !important;
+    font-weight: 600;
+    color: var(--accent-light);
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+.btn-cv {
+    background-color: white !important;
+    color: var(--accent) !important;
+    padding: 1rem 2.5rem !important;
+    font-weight: 800 !important;
+    border-radius: 8px !important;
+}
+
+.btn-github {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    padding: 1rem 2.5rem !important;
+    font-weight: 800 !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.cv-download-box .btn {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cv-download-box .btn:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.2);
+}
+
+@keyframes subtleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
 }
